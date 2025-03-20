@@ -1,0 +1,69 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--region Base application theme. -->
+    <style name="Theme.InaDraft" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="drawerArrowStyle">@style/DrawerIcon</item>
+        <item name="actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
+    </style>
+    <!--endregion-->
+
+    <!--region common imageView-->
+    <style name="ShapeAppearance.App.CommonImgRounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <style name="CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+    <!--endregion-->
+
+    <!-- region common cardView-->
+    <style name="CardView.CommonRoundedAndElevated" parent="">
+        <item name="cardCornerRadius">@dimen/common__cardview__corner_radius</item>
+        <item name="cardElevation">@dimen/common__cardview__corner_radius</item>
+    </style>
+    <!--endregion-->
+
+    <!--region common toolbar-->
+    <style name="BaseToolbar" parent="">
+        <item name="background">@color/colorPrimary</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+    <!--endregion-->
+
+    <!--region progressBar -->
+    <style name="CircularDeterminateProgressBar">
+        <item name="android:indeterminateOnly">false </item>
+        <item name="android:progressDrawable">@drawable/progress_indicator_custom_circle</item>
+    </style>
+    <!--endregion-->
+
+    <!--region common button and hamburguer icon drawer-->
+    <style name="MyActionButtonOverflow" parent="Widget.AppCompat.Light.ActionButton.Overflow">
+        <item name="color">@color/white</item>
+    </style>
+    <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/white</item>
+    </style>
+    <!--endregion-->
+
+    <!--region row_team-->
+    <style name="RowTeamImgRounded" parent="ShapeAppearance.App.CommonImgRounded" />
+    <style name="RowTeamCardViewRoundedAndElevated" parent="CardView.CommonRoundedAndElevated"/>
+    <!--endregion-->
+
+    <!--region row_formation-->
+    <style name="RowFormationCardViewRoundedAndElevated" parent="CardView.CommonRoundedAndElevated"/>
+    <!--endregion-->
+</resources>

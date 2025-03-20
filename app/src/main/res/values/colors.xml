@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--region PALETTE-->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bluishGreen">#008577</color>
+    <color name="bluishGreenDark">#00574B</color>
+    <color name="fuchsia">#D81B60</color>
+    <color name="lightRed">#FD8888</color>
+    <color name="lightGreen">#9FF4AA</color>
+    <color name="gray">#C0CFCF</color>
+    <color name="lightGray">#BBCFCF</color>
+    <color name="bluishBlue">#eff2f7</color>
+    <color name="lightBlue">#8FA9C8</color>
+    <color name="darkBlue">#587393</color>
+    <color name="black">#000000</color>
+    <color name="darkRed">#AF2626</color>
+    <color name="yellowOrange">#d9b346</color>
+    <color name="darkBlue2">#1e2d3e</color>
+    <color name="loadingGray">#C8C8C9</color>
+    <color name="loadingGrayTransparent">#66C8C8C9</color>
+    <!--endregion-->
+
+    <!-- region COMMON -->
+    <color name="colorPrimary">@color/lightBlue</color>
+    <color name="colorPrimaryDark">@color/bluishGreenDark</color>
+    <color name="colorAccent">@color/fuchsia</color>
+    <color name="colorSecondary">@color/teal_200</color>
+    <color name="colorSecondaryVariant">@color/teal_700</color>
+    <color name="colorOnSecondary">@color/black</color>
+    <color name="colorWindowBackground">@color/white</color>
+    <!--endregion-->
+
+    <!--region common_player_card-->
+    <color name="commonPlayerCardText">@color/yellowOrange</color>
+    <!--endregion-->
+
+    <!--region activity_main-->
+    <color name="navDrawerBackground">@color/darkBlue2</color>
+    <!--endregion-->
+
+    <!--region fragment_home-->
+    <color name="homeFragmentLabelWelcomeToApp">#4C7E12</color>
+    <!--endregion-->
+
+    <!--region player_details_card-->
+    <color name="playerDetailsLabelPlayerMedia">@color/commonPlayerCardText</color>
+    <color name="playerDetailsLabelPlayerPosition">@color/commonPlayerCardText</color>
+    <color name="playerDetailsLabelPlayerName">@color/commonPlayerCardText</color>
+    <color name="playerDetailsLabelPlayerKickPoint">@color/commonPlayerCardText</color>
+    <color name="playerDetailsLabelPlayerKickDescription">@color/commonPlayerCardText</color>
+    <color name="playerDetailsLabelPlayerBodyPoint">@color/commonPlayerCardText</color>
+    <color name="playerDetailsLabelPlayerBodyDescription">@color/commonPlayerCardText</color>
+    <color name="playerDetailsLabelPlayerControlPoint">@color/commonPlayerCardText</color>
+    <color name="playerDetailsLabelPlayerControlDescription">@color/commonPlayerCardText</color>
+    <color name="playerDetailsLabelPlayerGuardPoint">@color/commonPlayerCardText</color>
+    <color name="playerDetailsLabelPlayerGuardDescription">@color/commonPlayerCardText</color>
+    <color name="playerDetailsLabelPlayerSpeedPoint">@color/commonPlayerCardText</color>
+    <color name="playerDetailsLabelPlayerSpeedDescription">@color/commonPlayerCardText</color>
+    <color name="playerDetailsLabelPlayerGutsPoint">@color/commonPlayerCardText</color>
+    <color name="playerDetailsLabelPlayerGutsDescription">@color/commonPlayerCardText</color>
+    <!--endregion-->
+
+    <!--region player_mini_card-->
+    <color name="playerMiniLabelPlayerMedia">@color/commonPlayerCardText</color>
+    <color name="playerMiniLabelPlayerPosition">@color/commonPlayerCardText</color>
+    <color name="playerMiniLabelPlayerName">@color/commonPlayerCardText</color>
+    <color name="playerMiniCardLabelPositionPreview">@color/black</color>
+    <color name="playerMiniCardLabelPositionPreviewBackground">#CBE4DCDC</color>
+    <!--endregion-->
+
+    <!--region header_navigation_drawer-->
+    <color name="headerNavDrawerBackground">#2E3F53</color>
+    <color name="labelNavDrawerTitleApp">@color/white</color>
+    <color name="labelNavDrawerCompanySignature">@color/lightGray</color>
+    <!--endregion-->
+
+    <!--region row_team-->
+    <color name="rowTeamCardViewBackground">@color/bluishBlue</color>
+    <!--endregion-->
+
+    <!--region row_player_details-->
+    <color name="rowPlayerDetailsCardViewBackground">@color/bluishBlue</color>
+    <!--endregion-->
+
+    <!--region dialog_score_game-->
+    <color name="dialogScoreGameLabelDialogTitle">@color/black</color>
+    <!--endregion-->
+
+    <!--region row_formation-->
+    <color name="rowFormationLabelFormationName">@color/black</color>
+    <!--endregion-->
+
+    <!--region fragment_formation442-->
+    <color name="formation442FragmentBtnFinishDraftTextColor">@color/black</color>
+    <color name="formation442FragmentBtnFinishDraftBackgroundDisabled">#51ADB8A8</color>
+    <color name="formation442FragmentBtnFinishDraftBackgroundEnabled">#B8C5B2</color>
+    <!--endregion-->
+
+    <!--region row_game-->
+    <color name="rowGameLabelTeamScore">@color/black</color>
+    <!--endregion-->
+
+    <!--region row_player_mini_game-->
+    <color name="rowPlayerMiniGameLabelTeamName">@color/black</color>
+    <color name="rowPlayerMiniGameLabelPositionName">@color/black</color>
+    <!--endregion-->
+
+    <!--region row_team-->
+    <color name="rowTeamLabelTeamName">@color/black</color>
+    <!--endregion-->
+</resources>

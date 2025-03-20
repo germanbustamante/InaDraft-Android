@@ -1,0 +1,120 @@
+<resources>
+
+    <!--region common-->
+    <string name="app_name">InaDraft</string>
+    <string name="common__card_kick_description">KCK</string>
+    <string name="common__card_body_description">BDY</string>
+    <string name="common__card_control_description">CTR</string>
+    <string name="common__card_guard_description">GRD</string>
+    <string name="common__card_speed_description">SPD</string>
+    <string name="common__card_guts_description">GUT</string>
+    <!--endregion-->
+
+    <!--region manifest-->
+    <string name="title_activity_main">InaDraft</string>
+    <!--endregion-->
+
+    <!--region fragment_home-->
+    <string name="fragment_home__welcome_app">INADRAFT</string>
+    <string name="fragment_home__play_draft">Play</string>
+    <!--endregion-->
+
+    <!--region menu_activity_main_drawer-->
+    <string name="menu_activity_main_drawer__action_home">Inicio</string>
+    <string name="menu_activity_main_drawer__action_info">Info</string>
+    <string name="menu_activity_main_drawer__action_about_app">Sobre nosotros</string>
+    <string name="menu_activity_main_drawer__action_ranking">Clasificación</string>
+    <!--endregion-->
+
+    <!--region nav_graph-->
+    <string name="nav_graph__fragment_home__title">@string/menu_activity_main_drawer__action_home</string>
+    <string name="nav_graph__fragment_ranking__title">@string/menu_activity_main_drawer__action_ranking</string>
+    <string name="nav_graph__fragment_about_app__title">@string/menu_activity_main_drawer__action_about_app</string>
+    <string name="nav_graph__fragment_team_info_list__title">Equipos</string>
+    <string name="nav_graph__fragment_player_info_list__title">Jugadores</string>
+    <!--endregion-->
+
+    <!--region fragment_team_info_list-->
+    <string name="fragment_team_info_list__toolbar_tittle">Equipos</string>
+    <!--endregion-->
+
+    <!--region player_detail_card-->
+    <string name="player_detail_card__kick_description">@string/common__card_kick_description</string>
+    <string name="player_detail_card__body_description">@string/common__card_body_description</string>
+    <string name="player_detail_card__control_description">@string/common__card_control_description</string>
+    <string name="player_detail_card__guard_description">@string/common__card_guard_description</string>
+    <string name="player_detail_card__speed_description">@string/common__card_speed_description</string>
+    <string name="player_detail_card__guts_description">@string/common__card_guts_description</string>
+    <!--endregion-->
+
+    <!--region header_navigation_drawer-->
+    <string name="header_navigation_drawer__label_app_name">@string/app_name</string>
+    <string name="header_navigation_drawer__label_company_signature">Creado por Germán De Bustamante Conde</string>
+    <!--endregion-->
+
+    <!--region preference_about_app_header-->
+    <string name="preference_about_app_header__title">@string/menu_activity_main_drawer__action_about_app</string>
+    <!--endregion-->
+
+    <!-- region about_app_preferences -->
+    <!-- Textos fijos de cada categoría -->
+
+    <string name="other_apps_title">Mis otras aplicaciones</string>
+    <string name="other_apps_summary">Descubre el resto de mis aplicaciones</string>
+    <string name="rate_app_title">Califícame en Google Play</string>
+    <string name="rate_app_summary">Me ayuda a mejorar aún más la aplicación</string>
+    <string name="privacy_policy_title">Licencia y política de privacidad</string>
+    <string name="privacy_policy_summary">Detalles de licencia y política de privacidad</string>
+    <string name="follow_twitter_title">Sigueme en GitHub</string>
+    <string name="developer_page_title">Mi página de Linkedin</string>
+    <string name="developer_page_summary">Un resumen de lo que hago</string>
+    <string name="email_contact_title">Contáctame por email</string>
+
+    <!-- Botones de la toolbar -->
+    <string name="share_app_content">Hi! I\'d like to show you the %1$s app: %2$s</string>
+    <string name="share_app_title">Compartir</string>
+    <string name="app_information">Información</string>
+
+    <!-- Nombres de las categorías -->
+    <string name="category_information">Information</string>
+    <string name="category_dev">Developer</string>
+
+    <!--  Enlace hacía el apartado de todas tus aplicaciones de Google Play  -->
+    <string name="other_apps_link" translatable="false">https://www.instagram.com/germanbustamante_</string>
+    <!--  Enlace hacía tu política de privacidad  -->
+    <string name="privacy_policy_link" translatable="false">https://theuselessweb.com/</string>
+    <!--  Enlace hacía tu perfil de usuario de Twitter  -->
+    <string name="follow_github_link" translatable="false">https://github.com/GermanBustamante</string>
+    <!--  Nombre de tu usuario de Twitter  -->
+    <string name="follow_github_summary" translatable="false">\@GermanBustamante</string>
+    <!--  Enlace de tu página de desarrollador de Google Play  -->
+    <string name="linkedin_page_link" translatable="false">https://www.linkedin.com/in/germandebustamante</string>
+    <!--  Email de contacto, personal o el que quieras usar  -->
+    <string name="email_contact_summary" translatable="false">germanbustamante.trabajo@gmail.com</string>
+    <!--  Texto que aparece en el footer de las preferencias  -->
+    <string name="developer_copyright" translatable="false">Developer by Germán De Bustamante Conde</string>
+    <!--endregion-->
+
+    <!--region fragment_formation_list-->
+    <string name="fragment_formation_list__label__choose_formation">ELIGE UNA ALINEACIÓN</string>
+    <!--endregion-->
+
+    <!--region dialog_score_game-->
+    <string name="dialog_score_game__label__dialog_title">DRAFT</string>
+    <string name="dialog_score_game__label__team_media">MEDIA</string>
+    <string name="dialog_score_game__label__score">TOTAL</string>
+    <string name="dialog_score_game__input__hint_user_nick">Nick</string>
+    <string name="dialog_score_game__btn__add_game">Añadir</string>
+    <string name="dialog_score_game__label__total_puntuation">Puntuación total</string>
+    <string name="dialog_score_game__snackbar__game_added_success">Partida añadida correctamente</string>
+    <!--endregion-->
+
+    <!--region formation_base-->
+    <string name="formation_base__label__team_media_init">0</string>
+    <!--endregion-->
+
+    <!--fragment_442-->
+    <string name="fragment_442__btn__draft_finished">Listo</string>
+    <!--endregion-->
+
+</resources>

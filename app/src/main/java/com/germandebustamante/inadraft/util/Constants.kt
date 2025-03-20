@@ -1,0 +1,12 @@
+package com.germandebustamante.inadraft.util
+
+const val GOOGLE_PLAY_ENDPOINT = "https://play.google.com/store/apps/details?id="
+const val TYPE_INTENT_SHARE = "text/plain"
+    
+const val SEND_EMAIL_TO_DEV = "send_mail_to_dev"
+const val PREF_RATE_APP = "pref_rate_app"
+const val PREF_OPEN_POLICY = "pref_open_policy"
+
+const val EMPTY_STRING = ""
+
+const val NUMBER_OF_PLAYERS = 11

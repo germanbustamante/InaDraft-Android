@@ -1,0 +1,48 @@
+package com.germandebustamante.data.remote.api
+
+import com.germandebustamante.inadraft.entity.dto.FormationDTO
+import com.germandebustamante.inadraft.entity.dto.GameDTO
+import com.germandebustamante.inadraft.entity.dto.PlayerDTO
+import com.germandebustamante.inadraft.entity.dto.PositionDTO
+import com.germandebustamante.inadraft.entity.dto.TeamDTO
+import retrofit2.Response
+import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.POST
+import retrofit2.http.Path
+
+interface InaDraftApiService {
+
+    //region gets
+
+    @GET("Players")
+    suspend fun getPlayers(): Response<List<PlayerDTO>>
+
+    @GET("Teams")
+    suspend fun getTeams() : Response<List<TeamDTO>>
+
+    @GET("Players/team/{id}")
+    suspend fun getPlayersFromTeam(@Path(value = "id") teamId: Int): Response<List<PlayerDTO>>
+
+    @GET("Teams/{id}")
+    suspend fun getTeam(@Path(value = "id") teamId : Int) : Response<TeamDTO>
+
+    @GET("Positions")
+    suspend fun getPositions() : Response<List<PositionDTO>>
+
+    @GET("Formations")
+    suspend fun getFormations(): Response<List<FormationDTO>>
+
+    @GET("Games")
+    suspend fun getGames(): List<GameDTO>
+
+    //endregion
+
+    //region post
+
+    @POST("Games")
+    suspend fun insertGame(@Body game: GameDTO): Response<Any>
+
+    //endregion
+
+}
