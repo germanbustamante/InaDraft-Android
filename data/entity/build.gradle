@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
-    id 'org.jetbrains.kotlin.jvm'
-    id 'com.google.devtools.ksp'
+    alias libs.plugins.kotlin.jvm
+    alias libs.plugins.ksp
 }
 
 java {
@@ -12,6 +12,6 @@ java {
 dependencies {
     implementation project(path: ':domain')
     //Moshi
-    implementation "com.squareup.moshi:moshi:1.14.0"
-    ksp "com.squareup.moshi:moshi-kotlin-codegen:1.13.0"
+    implementation libs.moshi
+    ksp libs.moshi.kotlin.codegen
 }

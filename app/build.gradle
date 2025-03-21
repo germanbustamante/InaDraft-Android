@@ -47,84 +47,72 @@ android {
 }
 
 dependencies {
+    // Modules Architecture
+    implementation(project(':usescases'))
+    implementation(project(':domain'))
+    implementation(project(path: ':data:repository'))
+    implementation(project(path: ':data:datasource'))
+    implementation(project(path: ':data:remote'))
+    implementation(project(path: ':data:entity'))
+    implementation(project(path: ':data:local'))
 
-    implementation 'androidx.core:core-ktx:1.14.0-alpha01'
-    implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'com.google.android.material:material:1.12.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.8.7'
+    implementation(libs.legacy.support.v4)
+    implementation(libs.lifecycle.livedata.ktx)
 
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    testImplementation(libs.junit4)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.espresso.core)
 
-    //Modules Clean Arquitechture
-    implementation project(':usescases')
-    implementation project(':domain')
-    implementation project(path: ':data:repository')
-    implementation project(path: ':data:datasource')
-    implementation project(path: ':data:remote')
-    implementation project(path: ':data:entity')
-    implementation project(path: ':data:local')
+    // Coordinator layout
+    implementation(libs.coordinatorlayout)
+    implementation(libs.material)
 
-    //Coordinator layout
-    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.3.0'
-    implementation 'com.google.android.material:material:1.12.0'
-    //Glide
-    implementation 'com.github.bumptech.glide:glide:4.13.2'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+    // Glide
+    implementation(libs.glide)
+    annotationProcessor(libs.glide.compiler)
 
-    //Coroutines
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1'
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.8.7"
-    //Material Design
-    implementation 'com.google.android.material:material:1.12.0'
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.lifecycle.runtime.ktx)
 
-    //SwipeRefresh Layout
-    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+    // SwipeRefresh Layout
+    implementation(libs.swiperefreshlayout)
 
-    //Navigation component
-    // Kotlin
-    implementation("androidx.navigation:navigation-fragment-ktx:2.8.9")
-    implementation("androidx.navigation:navigation-ui-ktx:2.8.9")
-    // Feature module Support
-    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.8.9")
-    // Testing Navigation
-    androidTestImplementation("androidx.navigation:navigation-testing:2.8.9")
+    // Navigation component
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
+    implementation(libs.navigation.dynamic.features.fragment)
+    androidTestImplementation(libs.navigation.testing)
+    implementation(libs.navigation.compose)
 
-    // Jetpack Compose Integration
-    implementation("androidx.navigation:navigation-compose:2.8.9")
+    // Dagger Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 
-    //Dagger Hilt
-    implementation 'com.google.dagger:hilt-android:2.48'
-    kapt 'com.google.dagger:hilt-compiler:2.48'
+    // Moshi + Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.moshi)
 
-    //Moshi + Retrofit
-    implementation "com.squareup.retrofit2:retrofit:2.9.0"
-    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    // Shimmer
+    implementation(libs.shimmer)
 
-    //Shimer
-    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    // Preference
+    implementation(libs.preference.ktx)
 
-    //Preference
-    implementation "androidx.preference:preference-ktx:1.2.1"
+    // WebKit & Window
+    implementation(libs.webkit)
+    implementation(libs.window)
 
-    //WebKit Window
-    implementation "androidx.webkit:webkit:1.13.0"
-    implementation "androidx.window:window:1.3.0"
+    // RecyclerView
+    implementation(libs.recyclerview)
 
-    //RecyclerView
-    implementation "androidx.recyclerview:recyclerview:1.3.0"
+    // Splash Screen
+    implementation(libs.core.splashscreen)
 
-    //Splash Screen
-    implementation 'androidx.core:core-splashscreen:1.0.1'
+    // Lottie
+    implementation(libs.lottie)
 
-    //Lottie
-    implementation "com.airbnb.android:lottie:6.0.0"
-
-    //Gifts
-    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.24'
-
+    // GIF support
+    implementation(libs.android.gif.drawable)
 }
