@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
-    id 'org.jetbrains.kotlin.jvm'
     id 'kotlin-kapt'
+    alias libs.plugins.kotlin.jvm
 }
 
 java {
@@ -11,10 +11,9 @@ java {
 
 dependencies {
     implementation project(path: ':domain')
-    //Hilt
-    implementation "com.google.dagger:hilt-core:2.48"
-    kapt "com.google.dagger:hilt-compiler:2.48"
+    implementation project(path: ':data:datasource')
 
-    implementation project(path: ':data:datasource')
-    implementation project(path: ':data:datasource')
+    //Hilt
+    implementation libs.hilt.core
+    kapt libs.hilt.compiler
 }

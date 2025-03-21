@@ -1,29 +1,50 @@
 plugins {
-    id 'java-library'
-    id 'org.jetbrains.kotlin.jvm'
     id 'kotlin-kapt'
-    id 'com.google.devtools.ksp'
+    alias libs.plugins.android.library
+    alias libs.plugins.kotlin.android
+    alias libs.plugins.ksp
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+android {
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 34
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+    kotlinOptions {
+        jvmTarget = '21'
+    }
+
+    namespace 'com.germandebustamante.inadraft.remote'
 }
 
 dependencies {
     implementation project(':domain')
+    implementation project(':data:entity')
+    implementation project(':data:datasource')
 
     //Hilt
-    implementation "com.google.dagger:hilt-core:2.48"
-    kapt "com.google.dagger:hilt-compiler:2.48"
+    implementation libs.hilt.core
+    kapt libs.hilt.compiler
 
     //Retrofit
-    implementation "com.squareup.retrofit2:retrofit:2.9.0"
-    //Moshi + Retrofit
-    implementation "com.squareup.moshi:moshi:1.14.0"
-    implementation project(path: ':data:entity')
-    implementation project(path: ':data:datasource')
-    ksp "com.squareup.moshi:moshi-kotlin-codegen:1.13.0"
-    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
-
+    implementation libs.retrofit
+    implementation libs.moshi
+    ksp libs.moshi.kotlin.codegen
+    implementation libs.converter.moshi
 }
