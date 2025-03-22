@@ -3,7 +3,7 @@ package com.germandebustamante.inadraft.ui.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import com.germandebustamante.inadraft.usecases.PopulateDatabaseUseCase
+import com.germandebustamante.inadraft.domain.PopulateDatabaseUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -29,7 +29,7 @@ class MainActivityVM @Inject constructor(
     //region public methods
     init {
         viewModelScope.launch(Dispatchers.IO) {
-            populateDatabaseUseCase.invoke()
+            //populateDatabaseUseCase.invoke()
             delay(500)
             _isLoading.value = false
         }

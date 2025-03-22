@@ -1,15 +1,13 @@
 package com.germandebustamante.inadraft.local.datasource
 
-import com.germandebustamante.inadraft.domain.GameBO
 import com.germandebustamante.inadraft.datasource.game.GameLocalDataSource
+import com.germandebustamante.inadraft.domain.game.model.GameBO
 import com.germandebustamante.inadraft.local.room.dao.GameDao
 import com.germandebustamante.inadraft.local.room.toDBO
 import com.germandebustamante.inadraft.local.room.toGameBO
+import javax.inject.Inject
 
-/**
- * Implementación de [GameLocalDataSource] que usa una BBDD para operaciones CRUD sobre partidas
- */
-class GameLocalDataSourceImpl(private val gameDao: GameDao) : GameLocalDataSource {
+class GameLocalDataSourceImpl @Inject constructor(private val gameDao: GameDao) : GameLocalDataSource {
 
     override suspend fun getLocalBestGames(): List<GameBO> =
         gameDao.getBestGames().map { it.toGameBO() }

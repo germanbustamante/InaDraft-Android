@@ -32,11 +32,6 @@ class AboutAppPreferenceFragment : PreferenceFragmentCompat() {
         rateApplicationInGooglePlay()
         sendEmailToDeveloper()
     }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.about_menu, menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
     //endregion
 
     //region private methods

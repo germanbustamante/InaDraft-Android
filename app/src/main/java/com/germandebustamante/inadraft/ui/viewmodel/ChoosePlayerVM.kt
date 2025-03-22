@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import com.germandebustamante.inadraft.domain.PlayerBO
-import com.germandebustamante.inadraft.usecases.GetRandomPlayersByPositionUseCase
+import com.germandebustamante.inadraft.domain.player.model.PlayerBO
+import com.germandebustamante.inadraft.domain.player.usecase.GetRandomPlayersByPositionUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -28,7 +28,7 @@ class ChoosePlayerVM @Inject constructor(
     //region public functions
     fun loadRandomPlayers(positionId : Int) {
         viewModelScope.launch(Dispatchers.IO) {
-            _randomPlayers.postValue(getRandomPlayersByPositionUseCase.invoke(positionId))
+            //_randomPlayers.postValue(getRandomPlayersByPositionUseCase.invoke(positionId))
         }
     }
     //endregion

@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.germandebustamante.inadraft.util.loadGlideCenterImage
 import com.germandebustamante.inadraft.R
 import com.germandebustamante.inadraft.databinding.RowPlayerDetailBinding
-import com.germandebustamante.inadraft.domain.PlayerBO
+import com.germandebustamante.inadraft.domain.player.model.PlayerBO
 
 class PlayerDetailAdapter : ListAdapter<PlayerBO, PlayerDetailViewHolder>(
     PlayerBODiffCallback
@@ -75,8 +75,8 @@ object PlayerBODiffCallback : DiffUtil.ItemCallback<PlayerBO>() {
 private fun RowPlayerDetailBinding.bind(player: PlayerBO) {
     rowPlayerDetailContent.apply {
         playerDetailCardLabelPlayerMedia.text = player.average.toString()
-        playerDetailCardLabelPlayerPosition.text = player.position.name
-        playerDetailCardImgPlayerShield.loadGlideCenterImage(player.team.shield)
+        //playerDetailCardLabelPlayerPosition.text = player.position.name
+        //playerDetailCardImgPlayerShield.loadGlideCenterImage(player.team.shield)
         playerDetailCardLabelPlayerName.text = player.name.uppercase()
         playerDetailCardImgPlayerPhoto.loadGlideCenterImage(player.photo)
         playerDetailCardLabelPlayerKickPunctuation.text = player.kick.toString()

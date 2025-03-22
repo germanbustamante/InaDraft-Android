@@ -80,7 +80,7 @@
 
     <fragment
         android:id="@+id/formation442Fragment"
-        android:name="com.germandebustamante.inadraft.ui.view.fragment.Formation442Fragment"
+        android:name="com.germandebustamante.inadraft.presentation.formation.Formation442Fragment"
         android:label=""
         tools:layout="@layout/fragment_formation442">
 

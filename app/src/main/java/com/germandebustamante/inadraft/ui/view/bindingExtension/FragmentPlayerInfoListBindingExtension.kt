@@ -4,7 +4,7 @@ import androidx.core.view.isVisible
 import com.germandebustamante.inadraft.ui.adapter.PlayerDetailAdapter
 import com.germandebustamante.inadraft.ui.viewmodel.PlayerInfoListVM
 import com.germandebustamante.inadraft.databinding.FragmentPlayerInfoListBinding
-import com.germandebustamante.inadraft.domain.PlayerBO
+import com.germandebustamante.inadraft.domain.player.model.PlayerBO
 
 //region public methods
 fun FragmentPlayerInfoListBinding.setupRecyclerView(adapter: PlayerDetailAdapter) {

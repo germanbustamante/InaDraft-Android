@@ -48,13 +48,10 @@ android {
 
 dependencies {
     // Modules Architecture
-    implementation(project(':usescases'))
     implementation(project(':domain'))
     implementation(project(path: ':data:repository'))
     implementation(project(path: ':data:datasource'))
-    implementation(project(path: ':data:remote'))
     implementation(project(path: ':data:entity'))
-    implementation(project(path: ':data:local'))
 
     implementation(libs.legacy.support.v4)
     implementation(libs.lifecycle.livedata.ktx)

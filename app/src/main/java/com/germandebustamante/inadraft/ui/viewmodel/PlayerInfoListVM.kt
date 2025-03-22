@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import com.germandebustamante.inadraft.domain.PlayerBO
-import com.germandebustamante.inadraft.usecases.GetPlayersByTeamUseCase
+import com.germandebustamante.inadraft.domain.player.model.PlayerBO
+import com.germandebustamante.inadraft.domain.player.usecase.GetPlayersByTeamUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -33,7 +33,7 @@ class PlayerInfoListVM @Inject constructor(
     fun loadPlayerByTeam(teamId: Int) {
         viewModelScope.launch(Dispatchers.IO) {
             _progressVisible.postValue(true)
-            _playerList.postValue(getPlayersByTeamUseCase.invoke(teamId))
+            //_playerList.postValue(getPlayersByTeamUseCase.invoke(teamId))
             _progressVisible.postValue(false)
         }
     }

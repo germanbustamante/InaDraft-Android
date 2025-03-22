@@ -20,8 +20,8 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 import com.germandebustamante.inadraft.R
 import com.germandebustamante.inadraft.databinding.DialogScoreGameBinding
-import com.germandebustamante.inadraft.domain.FormationBO
-import com.germandebustamante.inadraft.domain.GameBO
+import com.germandebustamante.inadraft.domain.formation.model.FormationBO
+import com.germandebustamante.inadraft.domain.game.model.GameBO
 import java.time.Instant
 import java.util.Date
 

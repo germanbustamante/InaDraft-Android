@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.germandebustamante.inadraft.util.loadGlideCenterImage
 import com.germandebustamante.inadraft.R
 import com.germandebustamante.inadraft.databinding.RowTeamBinding
-import com.germandebustamante.inadraft.domain.TeamBO
+import com.germandebustamante.inadraft.domain.team.model.TeamBO
 
 class TeamAdapter(private val onTeamClickedListener : (TeamBO) -> Unit) : ListAdapter<TeamBO, TeamViewHolder>(TeamDiffCallback){
 

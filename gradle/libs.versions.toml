@@ -1,6 +1,6 @@
 [versions]
 # UI & AndroidX
-gradle = "8.4.2"
+gradle = "8.9.0"
 material = "1.12.0"
 legacy_support = "1.0.0"
 swiperefreshlayout = "1.1.0"
@@ -41,7 +41,7 @@ lottie = "6.0.0"
 hilt_android = "2.48"
 
 # Kotlin & Coroutines
-kotlinx_coroutines_android = "1.8.1"
+kotlinx_coroutines = "1.8.1"
 
 # Testing
 espresso_core = "3.6.1"
@@ -116,7 +116,8 @@ hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hil
 hilt-core = { module = "com.google.dagger:hilt-core", version.ref = "hilt_android" }
 
 # Kotlin & Coroutines
-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx_coroutines_android" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx_coroutines" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx_coroutines" }
 
 #Top Level
 gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }

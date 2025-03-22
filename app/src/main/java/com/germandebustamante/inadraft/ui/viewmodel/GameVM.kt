@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import com.germandebustamante.inadraft.domain.PlayerBO
-import com.germandebustamante.inadraft.usecases.GetPlayerByIdUseCase
+import com.germandebustamante.inadraft.domain.player.model.PlayerBO
+import com.germandebustamante.inadraft.domain.player.usecase.GetPlayerByIdUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -30,7 +30,7 @@ class GameVM @Inject constructor(
     fun loadPlayer(playerCardId: Int, playerId: Int){
         viewModelScope.launch(Dispatchers.IO) {
             val playersMapDraft = _playersDraft.value
-            playersMapDraft?.put(playerCardId, getPlayerByIdUseCase.invoke(playerId))
+            //playersMapDraft?.put(playerCardId, getPlayerByIdUseCase.invoke(playerId))
             _playersDraft.postValue(playersMapDraft ?: mutableMapOf())
         }
     }

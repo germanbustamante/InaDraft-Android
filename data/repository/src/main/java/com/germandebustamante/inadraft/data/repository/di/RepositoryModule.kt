@@ -1,76 +1,35 @@
 package com.germandebustamante.inadraft.data.repository.di
 
-import com.germandebustamante.inadraft.data.repository.FormationRepository
-import com.germandebustamante.inadraft.data.repository.GameRepository
-import com.germandebustamante.inadraft.data.repository.PlayerRepository
-import com.germandebustamante.inadraft.data.repository.PositionRepository
-import com.germandebustamante.inadraft.data.repository.TeamRepository
+import com.germandebustamante.inadraft.data.repository.formation.FormationRepositoryImpl
+import com.germandebustamante.inadraft.data.repository.game.GameRepositoryImpl
+import com.germandebustamante.inadraft.data.repository.player.PlayerRepositoryImpl
+import com.germandebustamante.inadraft.data.repository.position.PositionRepositoryImpl
+import com.germandebustamante.inadraft.data.repository.team.TeamRepositoryImpl
+import com.germandebustamante.inadraft.domain.formation.repository.FormationRepository
+import com.germandebustamante.inadraft.domain.game.repository.GameRepository
+import com.germandebustamante.inadraft.domain.player.repository.PlayerRepository
+import com.germandebustamante.inadraft.domain.position.repository.PositionRepository
+import com.germandebustamante.inadraft.domain.team.repository.TeamRepository
+import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import com.germandebustamante.inadraft.datasource.FormationLocalDataSource
-import com.germandebustamante.inadraft.datasource.FormationRemoteDataSource
-import com.germandebustamante.inadraft.datasource.game.GameLocalDataSource
-import com.germandebustamante.inadraft.datasource.game.GameRemoteDataSource
-import com.germandebustamante.inadraft.datasource.player.PlayerLocalDataSource
-import com.germandebustamante.inadraft.datasource.player.PlayerRemoteDataSource
-import com.germandebustamante.inadraft.datasource.position.PositionLocalDataSource
-import com.germandebustamante.inadraft.datasource.position.PositionRemoteDataSource
-import com.germandebustamante.inadraft.datasource.team.TeamLocalDataSource
-import com.germandebustamante.inadraft.datasource.team.TeamRemoteDataSource
 
-/**
- * Modulo de inyección de dependencias sobre el módulo data:repository
- */
 @Module
 @InstallIn(SingletonComponent::class)
-object RepositoryModule {
+abstract class RepositoryModule {
+    @Binds
+    abstract fun bindPlayerRepository(playerRepository: PlayerRepositoryImpl): PlayerRepository
 
-    @Provides
-    fun teamRepositoryProvider(
-        teamRemoteDataSource: TeamRemoteDataSource,
-        teamLocalDataSource: TeamLocalDataSource,
-    ) =
-        TeamRepository(teamRemoteDataSource, teamLocalDataSource)
+    @Binds
+    abstract fun bindTeamRepository(teamRepository: TeamRepositoryImpl): TeamRepository
 
-    @Provides
-    fun playerRepositoryProvider(
-        playerRemoteDataSource: PlayerRemoteDataSource,
-        playerLocalDataSource: PlayerLocalDataSource,
-        teamRepository: TeamRepository,
-        positionRepository: PositionRepository,
-        formationRepository: FormationRepository,
-        gameRepository: GameRepository
-    ) =
-        PlayerRepository(
-            playerRemoteDataSource,
-            playerLocalDataSource,
-            teamRepository,
-            positionRepository,
-            formationRepository,
-            gameRepository
-        )
+    @Binds
+    abstract fun bindPositionRepository(positionRepository: PositionRepositoryImpl): PositionRepository
 
-    @Provides
-    fun positionRepositoryProvider(
-        positionRemoteDataSource: PositionRemoteDataSource,
-        positonLocalDataSource: PositionLocalDataSource,
-    ) =
-        PositionRepository(positionRemoteDataSource, positonLocalDataSource)
+    @Binds
+    abstract fun bindFormationRepository(formationRepository: FormationRepositoryImpl): FormationRepository
 
-    @Provides
-    fun formationRepositoryProvider(
-        formationRemoteDataSource: FormationRemoteDataSource,
-        formationLocalDataSource: FormationLocalDataSource,
-    ) =
-        FormationRepository(formationRemoteDataSource, formationLocalDataSource)
-
-    @Provides
-    fun gameRepositoryProvider(
-        gameRemoteDataSource: GameRemoteDataSource,
-        gameLocalDataSource: GameLocalDataSource,
-        formationRepository: FormationRepository
-    ) =
-        GameRepository(gameLocalDataSource, gameRemoteDataSource, formationRepository)
+    @Binds
+    abstract fun bindGameRepository(gameRepository: GameRepositoryImpl): GameRepository
 }

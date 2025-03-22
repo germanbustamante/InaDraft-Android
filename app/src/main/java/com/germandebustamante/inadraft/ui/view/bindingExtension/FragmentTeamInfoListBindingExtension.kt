@@ -5,7 +5,7 @@ import androidx.navigation.findNavController
 import com.germandebustamante.inadraft.ui.adapter.TeamAdapter
 import com.germandebustamante.inadraft.ui.viewmodel.TeamInfoListVM
 import com.germandebustamante.inadraft.databinding.FragmentTeamInfoListBinding
-import com.germandebustamante.inadraft.domain.TeamBO
+import com.germandebustamante.inadraft.domain.team.model.TeamBO
 import com.germandebustamante.inadraft.ui.view.fragment.TeamInfoListFragmentDirections
 
 //region public methods
