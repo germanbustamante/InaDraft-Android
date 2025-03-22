@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.germandebustamante.inadraft.R
 import com.germandebustamante.inadraft.databinding.RowGameBinding
-import com.germandebustamante.inadraft.domain.GameBO
+import com.germandebustamante.inadraft.domain.game.model.GameBO
 import java.text.SimpleDateFormat
 
 private const val DATE_FORMAT_GAME = "MM/dd/yyyy"

@@ -30,7 +30,7 @@ android {
         jvmTarget = '21'
     }
 
-    namespace 'com.germandebustamante.inadraft.remote'
+    namespace 'com.germandebustamante.inadraft.data.remote'
 }
 
 dependencies {
@@ -42,9 +42,7 @@ dependencies {
     implementation libs.hilt.core
     kapt libs.hilt.compiler
 
-    //Retrofit
-    implementation libs.retrofit
-    implementation libs.moshi
-    ksp libs.moshi.kotlin.codegen
-    implementation libs.converter.moshi
+    //Firebase
+    implementation(platform(libs.google.firebase.bom))
+    implementation(libs.google.firebase.firestore.ktx)
 }

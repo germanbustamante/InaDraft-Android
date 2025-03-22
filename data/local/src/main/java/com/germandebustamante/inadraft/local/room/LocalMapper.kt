@@ -1,10 +1,10 @@
 package com.germandebustamante.inadraft.local.room
 
-import com.germandebustamante.inadraft.domain.FormationBO
-import com.germandebustamante.inadraft.domain.GameBO
-import com.germandebustamante.inadraft.domain.PlayerBO
-import com.germandebustamante.inadraft.domain.PositionBO
-import com.germandebustamante.inadraft.domain.TeamBO
+import com.germandebustamante.inadraft.domain.formation.model.FormationBO
+import com.germandebustamante.inadraft.domain.game.model.GameBO
+import com.germandebustamante.inadraft.domain.player.model.PlayerBO
+import com.germandebustamante.inadraft.domain.position.model.PositionBO
+import com.germandebustamante.inadraft.domain.team.model.TeamBO
 import com.germandebustamante.inadraft.local.room.dbo.entity.FormationDBO
 import com.germandebustamante.inadraft.local.room.dbo.entity.GameDBO
 import com.germandebustamante.inadraft.local.room.dbo.entity.PlayerDBO

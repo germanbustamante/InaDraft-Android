@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.germandebustamante.inadraft.R
 import com.germandebustamante.inadraft.databinding.RowFormationBinding
 import com.germandebustamante.inadraft.util.loadGlideCenterImage
-import com.germandebustamante.inadraft.domain.FormationBO
+import com.germandebustamante.inadraft.domain.formation.model.FormationBO
 
 class FormationAdapter(private val onFormationSelectedListener: (FormationBO) -> Unit) :
     ListAdapter<FormationBO, FormationViewHolder>(

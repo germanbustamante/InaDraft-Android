@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import com.germandebustamante.inadraft.domain.GameBO
-import com.germandebustamante.inadraft.usecases.GetBestGamesUseCase
+import com.germandebustamante.inadraft.domain.game.model.GameBO
+import com.germandebustamante.inadraft.domain.game.usecase.GetBestGamesUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject

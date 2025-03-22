@@ -2,9 +2,9 @@ package com.germandebustamante.inadraft.ui.view.bindingExtension
 
 import androidx.navigation.findNavController
 import com.germandebustamante.inadraft.ui.adapter.FormationAdapter
-import com.germandebustamante.inadraft.ui.view.fragment.Formation442Fragment.Companion.FORMATION_4_4_2
+import com.germandebustamante.inadraft.presentation.formation.Formation442Fragment.Companion.FORMATION_4_4_2
 import com.germandebustamante.inadraft.databinding.FragmentFormationListBinding
-import com.germandebustamante.inadraft.domain.FormationBO
+import com.germandebustamante.inadraft.domain.formation.model.FormationBO
 import com.germandebustamante.inadraft.ui.view.fragment.FormationListFragmentDirections
 
 //region public methods

@@ -1,15 +1,13 @@
 package com.germandebustamante.inadraft.local.datasource
 
-import com.germandebustamante.inadraft.domain.PlayerBO
+import com.germandebustamante.inadraft.domain.player.model.PlayerBO
 import com.germandebustamante.inadraft.datasource.player.PlayerLocalDataSource
 import com.germandebustamante.inadraft.local.room.dao.PlayerDao
 import com.germandebustamante.inadraft.local.room.toDBO
 import com.germandebustamante.inadraft.local.room.toPlayerBO
+import javax.inject.Inject
 
-/**
- * Implementación de [PlayerLocalDataSource] que usa una BBDD para operaciones CRUD sobre jugadores
- */
-class PlayerLocalDataSourceImpl(
+class PlayerLocalDataSourceImpl @Inject constructor(
     private val playerDao : PlayerDao,
 ) : PlayerLocalDataSource {
 

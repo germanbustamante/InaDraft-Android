@@ -1,15 +1,13 @@
 package com.germandebustamante.inadraft.local.datasource
 
-import com.germandebustamante.inadraft.domain.FormationBO
-import com.germandebustamante.inadraft.datasource.FormationLocalDataSource
+import com.germandebustamante.inadraft.domain.formation.model.FormationBO
+import com.germandebustamante.inadraft.datasource.formation.FormationLocalDataSource
 import com.germandebustamante.inadraft.local.room.dao.FormationDao
 import com.germandebustamante.inadraft.local.room.toBO
 import com.germandebustamante.inadraft.local.room.toDBO
+import javax.inject.Inject
 
-/**
- * Implementación de [FormationLocalDataSource] que usa una BBDD para operaciones CRUD sobre formaciones
- */
-class FormationLocalDataSourceImpl(
+class FormationLocalDataSourceImpl @Inject constructor(
     private val formationDao: FormationDao
 ): FormationLocalDataSource {
 

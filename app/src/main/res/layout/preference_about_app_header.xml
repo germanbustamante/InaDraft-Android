@@ -11,7 +11,6 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
-            app:title="@string/nav_graph__fragment_about_app__title"
             android:id="@+id/aboutAppFragmentToolbarTop"
             style="@style/BaseToolbar"
             android:layout_width="0dp"
@@ -21,7 +20,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0" />
+            app:layout_constraintVertical_bias="0"
+            app:title="@string/nav_graph__fragment_about_app__title" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/aboutAppFragmentImgBackground"
@@ -64,10 +64,10 @@
             style="?android:attr/textAppearanceSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/aboutAppFragmentLabelAppName"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aboutAppFragmentLabelAppName"
             app:layout_constraintVertical_bias="0"
             tools:text="version 1.0" />
 

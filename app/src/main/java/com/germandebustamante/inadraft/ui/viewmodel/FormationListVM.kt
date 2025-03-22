@@ -4,9 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.germandebustamante.inadraft.domain.formation.model.FormationBO
+import com.germandebustamante.inadraft.domain.formation.usecase.GetFormationsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import com.germandebustamante.inadraft.domain.FormationBO
-import com.germandebustamante.inadraft.usecases.GetFormationsUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -17,8 +17,8 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class FormationListVM @Inject constructor(
-    private val getFormationsUseCase: GetFormationsUseCase
-) : ViewModel(){
+    private val getFormationsUseCase: GetFormationsUseCase,
+) : ViewModel() {
 
     //region livedata
     private val _formations = MutableLiveData<List<FormationBO>>()
@@ -27,9 +27,9 @@ class FormationListVM @Inject constructor(
 
     //region public functions
     fun loadFormations() {
-       viewModelScope.launch(Dispatchers.IO) {
-           _formations.postValue(getFormationsUseCase.invoke())
-       }
+        viewModelScope.launch(Dispatchers.IO) {
+            //_formations.postValue(getFormationsUseCase.invoke())
+        }
     }
     //endregion
 }

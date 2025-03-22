@@ -10,7 +10,7 @@ import com.germandebustamante.inadraft.ui.adapter.PlayerDetailAdapter
 import com.germandebustamante.inadraft.ui.view.base.BaseFragment
 import com.germandebustamante.inadraft.ui.view.bindingExtension.onPlayerListChanged
 import com.germandebustamante.inadraft.ui.view.bindingExtension.onProgressVisibleChanged
-import com.germandebustamante.inadraft.ui.view.bindingExtension.setupListeners
+import com.germandebustamante.inadraft.presentation.formation.setupListeners
 import com.germandebustamante.inadraft.ui.view.bindingExtension.setupRecyclerView
 import com.germandebustamante.inadraft.ui.viewmodel.PlayerInfoListVM
 import dagger.hilt.android.AndroidEntryPoint

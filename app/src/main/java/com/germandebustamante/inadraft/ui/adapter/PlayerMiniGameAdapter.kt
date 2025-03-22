@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.germandebustamante.inadraft.util.loadGlideCenterImage
 import com.germandebustamante.inadraft.R
 import com.germandebustamante.inadraft.databinding.RowPlayerMiniGameBinding
-import com.germandebustamante.inadraft.domain.PlayerBO
+import com.germandebustamante.inadraft.domain.player.model.PlayerBO
 
 class PlayerMiniGameAdapter(private val onPlayerSelectedListener: (PlayerBO) -> Unit) :
     ListAdapter<PlayerBO, PlayerMiniGameViewHolder>(
@@ -59,14 +59,14 @@ class PlayerMiniGameViewHolder(view: View, onPlayerSelectedListener: (PlayerBO) 
 private fun RowPlayerMiniGameBinding.bind(player: PlayerBO) {
     rowPlayerMiniGameCardViewPlayerMiniCard.apply {
         playerMiniCardLabelPlayerMedia.text = player.average.toString()
-        playerMiniCardLabelPlayerPosition.text = player.position.name
-        playerMiniCardImgPlayerShield.loadGlideCenterImage(player.team.shield)
+        //playerMiniCardLabelPlayerPosition.text = player.position.name
+        //playerMiniCardImgPlayerShield.loadGlideCenterImage(player.team.shield)
         playerMiniCardLabelPlayerName.text = player.firstName
         playerMiniCardImgPlayerPhoto.loadGlideCenterImage(player.photo)
     }
-    rowPlayerMiniGameImgPlayerShield.loadGlideCenterImage(player.team.shield)
-    rowPlayerMiniGameLabelPlayerShield.text = player.team.name
-    rowPlayerMiniGameLabelPlayerPosition.text = player.position.getFullName()
+    //rowPlayerMiniGameImgPlayerShield.loadGlideCenterImage(player.team.shield)
+    //rowPlayerMiniGameLabelPlayerShield.text = player.team.name
+    //rowPlayerMiniGameLabelPlayerPosition.text = player.position.getFullName()
 }
 
 //endregion
