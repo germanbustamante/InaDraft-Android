@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.germandebustamante.inadraft.ui.view.fragment.HomeFragment"
+        android:name="com.germandebustamante.inadraft.presentation.home.HomeFragment"
         android:label="@string/nav_graph__fragment_home__title"
         tools:layout="@layout/fragment_home">
 
@@ -22,7 +22,7 @@
 
     <fragment
         android:id="@+id/infoTeamFragment"
-        android:name="com.germandebustamante.inadraft.ui.view.fragment.TeamInfoListFragment"
+        android:name="com.germandebustamante.inadraft.presentation.information.team.TeamInfoListFragment"
         android:label="@string/nav_graph__fragment_team_info_list__title"
         tools:layout="@layout/fragment_team_info_list">
 
@@ -38,7 +38,7 @@
 
     <fragment
         android:id="@+id/playerListFragment"
-        android:name="com.germandebustamante.inadraft.ui.view.fragment.PlayerInfoListFragment"
+        android:name="com.germandebustamante.inadraft.presentation.information.player.PlayerInfoListFragment"
         android:label="@string/nav_graph__fragment_player_info_list__title"
         tools:layout="@layout/fragment_player_info_list">
 
@@ -51,7 +51,7 @@
 
     <fragment
         android:id="@+id/rankingFragment"
-        android:name="com.germandebustamante.inadraft.ui.view.fragment.RankingFragment"
+        android:name="com.germandebustamante.inadraft.presentation.ranking.RankingFragment"
         android:label="@string/nav_graph__fragment_ranking__title"
         tools:layout="@layout/fragment_ranking" />
 
@@ -61,7 +61,7 @@
 
     <fragment
         android:id="@+id/formationListFragment"
-        android:name="com.germandebustamante.inadraft.ui.view.fragment.FormationListFragment"
+        android:name="com.germandebustamante.inadraft.presentation.formation.list.FormationListFragment"
         android:label=""
         tools:layout="@layout/fragment_formation_list">
 
@@ -80,7 +80,7 @@
 
     <fragment
         android:id="@+id/formation442Fragment"
-        android:name="com.germandebustamante.inadraft.presentation.formation.Formation442Fragment"
+        android:name="com.germandebustamante.inadraft.presentation.formation.inner.Formation442Fragment"
         android:label=""
         tools:layout="@layout/fragment_formation442">
 
@@ -95,7 +95,7 @@
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
         <action
             android:id="@+id/action_formation442Fragment_to_scoreGameDialog"
@@ -103,20 +103,20 @@
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
     </fragment>
 
     <dialog
         android:id="@+id/choosePlayerDialog"
-        android:name="com.germandebustamante.inadraft.ui.view.dialog.choosePlayer.ChoosePlayerDialog"
+        android:name="com.germandebustamante.inadraft.presentation.playerSelection.PlayerSelectionDialog"
         android:label="dialog_choose_player"
         tools:layout="@layout/dialog_choose_player">
 
         <argument
             android:name="playerPositionId"
-            android:defaultValue="-1"
-            app:argType="integer" />
+            android:defaultValue=""
+            app:argType="string" />
 
         <argument
             android:name="playerCardId"
@@ -127,9 +127,9 @@
 
     <dialog
         android:id="@+id/scoreGameDialog"
-        android:name="com.germandebustamante.inadraft.ui.view.dialog.scoreGame.ScoreGameDialog"
+        android:name="com.germandebustamante.inadraft.presentation.score.ScoreGameDialog"
         android:label="scoreGameDialog"
-        tools:layout="@layout/dialog_score_game" >
+        tools:layout="@layout/dialog_score_game">
 
         <argument
             android:name="totalPunctuation"
@@ -145,6 +145,16 @@
             android:name="formationId"
             android:defaultValue="-1"
             app:argType="integer" />
+
+        <action
+            android:id="@+id/action_scoreGameDialog_to_home_fragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
 
     </dialog>
 

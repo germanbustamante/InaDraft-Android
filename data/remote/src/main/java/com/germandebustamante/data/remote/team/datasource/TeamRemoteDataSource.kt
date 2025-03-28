@@ -1,8 +1,9 @@
 package com.germandebustamante.data.remote.team.datasource
 
 import com.germandebustamante.inadraft.domain.team.model.TeamBO
+import kotlinx.coroutines.flow.Flow
 
 interface TeamRemoteDataSource {
-    suspend fun getRemoteTeams() : List<TeamBO>
-    suspend fun getRemoteTeam(teamId: Int): TeamBO
+    fun getTeams(teamIds: Array<Int>?): Flow<List<TeamBO>>
+    fun getTeam(teamId: Int): Flow<TeamBO>
 }

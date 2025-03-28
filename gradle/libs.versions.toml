@@ -52,8 +52,9 @@ mockk = "1.13.9"
 
 # Plugins
 androidApp = "8.1.0"
-kotlinGradlePlugin = "1.9.21"
-kspPlugin = "1.9.10-1.0.13"
+kotlinGradlePlugin = "1.9.23"
+kspPlugin = "1.9.23-1.0.19"
+googleServices = "4.4.2"
 
 [libraries]
 # Testing
@@ -129,6 +130,7 @@ androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:na
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidApp" }
 android-library = { id = "com.android.library", version.ref = "androidApp" }
+google-gms-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinGradlePlugin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlinGradlePlugin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "kspPlugin" }

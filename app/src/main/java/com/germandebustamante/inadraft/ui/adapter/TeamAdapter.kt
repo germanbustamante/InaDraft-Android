@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.germandebustamante.inadraft.util.loadGlideCenterImage
+import com.germandebustamante.inadraft.commonAndroid.loadGlideCenterImage
 import com.germandebustamante.inadraft.R
 import com.germandebustamante.inadraft.databinding.RowTeamBinding
 import com.germandebustamante.inadraft.domain.team.model.TeamBO
@@ -25,21 +25,12 @@ class TeamAdapter(private val onTeamClickedListener : (TeamBO) -> Unit) : ListAd
 }
 
 //region viewholder
-
-/**
- * ViewHolder personalizado para pintado de una formación de la lista
- */
 class TeamViewHolder(view: View) : RecyclerView.ViewHolder(view)  {
     val binding = RowTeamBinding.bind(view)
 }
-
 //endregion
 
 //region diffcallback
-
-/**
- * DiffCallback personalizado para mejorar el rendimiento y agregar animaciones por defecto a la lista
- */
 object TeamDiffCallback: DiffUtil.ItemCallback<TeamBO>() {
     override fun areItemsTheSame(oldItem: TeamBO, newItem: TeamBO): Boolean =
         oldItem.id == newItem.id
@@ -48,20 +39,14 @@ object TeamDiffCallback: DiffUtil.ItemCallback<TeamBO>() {
         oldItem == newItem
 
 }
-
 //endregion
 
 //region private functions
-
-/**
- * Dado una formación en un item específico, pinta los datos de esta en dicha fila
- */
 private fun RowTeamBinding.bind(team: TeamBO, onTeamClickedListener: (TeamBO) -> Unit) {
     rowTeamImgOfTeam.loadGlideCenterImage(team.shield)
     rowTeamLabelTeamName.text = team.name
     root.setOnClickListener { onTeamClickedListener(team) }
 }
-
 //endregion
 
 
