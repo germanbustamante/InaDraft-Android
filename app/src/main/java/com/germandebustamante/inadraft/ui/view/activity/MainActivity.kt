@@ -11,7 +11,6 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.germandebustamante.inadraft.ui.view.base.BaseActivity
-import com.germandebustamante.inadraft.ui.viewmodel.MainActivityVM
 import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import com.germandebustamante.inadraft.R
@@ -23,7 +22,7 @@ class MainActivity : BaseActivity() {
     //region class attributes
     private var binding: ActivityMainBinding? = null
     private val navController by lazy { getActivityNavController() }
-    private val viewModel: MainActivityVM by viewModels()
+    private val viewModel: MainActivityViewModel by viewModels()
     private val appBarConfiguration by lazy {
         AppBarConfiguration(
             setOf(

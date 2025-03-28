@@ -6,6 +6,6 @@ import kotlinx.coroutines.flow.Flow
 interface PlayerRepository {
     fun getPlayers(): Flow<List<PlayerBO>>
     fun getPlayerListByTeam(teamId: Int): Flow<List<PlayerBO>>
-    fun getRandomPlayersByPosition(positionId: Int): Flow<List<PlayerBO>>
-    suspend fun getPlayer(playerId: Int): Flow<PlayerBO>
+    fun getRandomPlayersByPosition(positionId: String): Flow<List<PlayerBO>>
+    fun getPlayer(playerId: String): Flow<PlayerBO>
 }

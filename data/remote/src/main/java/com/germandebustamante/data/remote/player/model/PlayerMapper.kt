@@ -1,19 +1,19 @@
 package com.germandebustamante.data.remote.player.model
 
 import com.germandebustamante.inadraft.domain.player.model.PlayerBO
-import com.germandebustamante.inadraft.domain.position.model.PositionBO
+import com.google.logging.type.LogSeverity.DEFAULT_VALUE
 
 fun PlayerDTO.toModel(): PlayerBO = PlayerBO(
-    id ?: -1,
-    name ?: "",
-    kick ?: -1,
-    body ?: -1,
-    control ?: -1,
-    guard ?: -1,
-    speed ?: -1,
-    stamina ?: -1,
-    guts ?: -1,
-    photo ?: "",
-    teamId.toString(),
-    PositionBO(positionId ?: -1, "")
+    id = id.orEmpty(),
+    name = name.orEmpty(),
+    position = position.orEmpty(),
+    kick = kick ?: DEFAULT_VALUE,
+    body = body ?: DEFAULT_VALUE,
+    control = control ?: DEFAULT_VALUE,
+    guard = guard ?: DEFAULT_VALUE,
+    speed = speed ?: DEFAULT_VALUE,
+    stamina = stamina ?: DEFAULT_VALUE,
+    guts = guts ?: DEFAULT_VALUE,
+    photo = imageUrl.orEmpty(),
+    teamId = teamId.toString(),
 )

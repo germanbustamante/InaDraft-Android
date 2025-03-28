@@ -1,0 +1,70 @@
+package com.germandebustamante.inadraft.presentation.formation.inner
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.navArgs
+import com.germandebustamante.inadraft.databinding.FragmentFormation442Binding
+import com.germandebustamante.inadraft.presentation.score.ScoreGameListener
+import com.germandebustamante.inadraft.ui.view.base.BaseFragment
+import com.germandebustamante.inadraft.presentation.playerSelection.PlayerSelectionListener
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class Formation442Fragment : BaseFragment<FragmentFormation442Binding>(), PlayerSelectionListener, ScoreGameListener {
+
+    //region class attributes
+    companion object {
+        const val FORMATION_4_4_2_ID = "4-4-2"
+    }
+
+    private val args: Formation442FragmentArgs by navArgs()
+    private val viewModel: GameViewModel by viewModels()
+    //endregion
+
+    //region override methods
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View? {
+        binding = inflateViewBinding(inflater, container)
+        binding?.apply {
+            setupDrawerWithFragmentToolbar(contentFormationBase.formationFragmentToolbarTop)
+            setupInitialViews()
+            setupListeners()
+        }
+        return binding?.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupVMObservers()
+    }
+
+    override fun inflateViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+    ): FragmentFormation442Binding =
+        FragmentFormation442Binding.inflate(inflater, container, false)
+
+    override fun putPlayerInCard(playerId: String, playerCardId: Int) {
+        viewModel.loadPlayer(playerCardId, playerId)
+        binding?.changeCardsClickable(true) // Como el loadPlayer deja su carta no clickable restringe a este metodo
+    }
+
+    override fun finishDraft() {
+        activity?.onBackPressed()
+    }
+    //endregion
+
+    //region private methods
+    private fun setupVMObservers() {
+        viewModel.playersDraft.observe(viewLifecycleOwner) {
+            binding?.onPlayersDraftChanged(it, args.formationId)
+        }
+    }
+    //endregion
+
+}

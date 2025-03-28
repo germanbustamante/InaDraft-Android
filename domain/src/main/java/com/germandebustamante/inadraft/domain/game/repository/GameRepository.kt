@@ -9,5 +9,5 @@ interface GameRepository {
 
     suspend fun insertGames(games: List<GameBO>)
 
-    suspend fun insertGame(game: GameBO): Boolean
+    fun insertGame(score: Int, nickname: String): Flow<Unit>
 }

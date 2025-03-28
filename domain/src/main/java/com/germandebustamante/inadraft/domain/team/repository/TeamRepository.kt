@@ -4,5 +4,6 @@ import com.germandebustamante.inadraft.domain.team.model.TeamBO
 import kotlinx.coroutines.flow.Flow
 
 interface TeamRepository {
-    fun getTeams(): Flow<List<TeamBO>>
+    fun getTeams(teamIds: Array<Int>? = null): Flow<List<TeamBO>>
+    fun getTeam(teamId: Int): Flow<TeamBO>
 }

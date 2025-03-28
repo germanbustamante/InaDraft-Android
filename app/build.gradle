@@ -5,6 +5,7 @@ plugins {
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
     id 'com.google.devtools.ksp'
+    alias libs.plugins.google.gms.services
 }
 
 kapt {
@@ -31,11 +32,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_21
-        targetCompatibility JavaVersion.VERSION_21
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '21'
+        jvmTarget = '17'
     }
     viewBinding{
         enabled = true
@@ -51,7 +52,6 @@ dependencies {
     implementation(project(':domain'))
     implementation(project(path: ':data:repository'))
     implementation(project(path: ':data:datasource'))
-    implementation(project(path: ':data:entity'))
 
     implementation(libs.legacy.support.v4)
     implementation(libs.lifecycle.livedata.ktx)
@@ -87,10 +87,6 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
 
-    // Moshi + Retrofit
-    implementation(libs.retrofit)
-    implementation(libs.converter.moshi)
-
     // Shimmer
     implementation(libs.shimmer)
 
@@ -112,4 +108,8 @@ dependencies {
 
     // GIF support
     implementation(libs.android.gif.drawable)
+
+    //Firebase
+    implementation(platform(libs.google.firebase.bom))
+    implementation(libs.google.firebase.firestore.ktx)
 }
